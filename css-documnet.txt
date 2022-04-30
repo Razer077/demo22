@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gloria+Hallelujah&display=swap');
+
+* {
+    -webkit-font-smoothing: anitaliased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.notice-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem;
+    background-color: rgb(237, 237, 247);
+}
+
+.notice-section>p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.notice-section>p>span>#notice-button {
+    align-items: center;
+    font-size: 0.8rem;
+    margin-left: 1.2rem;
+    border-radius: 5px;
+    padding: 0.1rem;
+    border: none;
+    background-color: rgba(3, 1, 1, 0.4);
+    cursor: pointer;
+}
+
+.navigation-bar {
+    padding: 1.5rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navigation-bar>#si {
+    font-family: cursive;
+    font-size: 2.5rem;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.navigation-bar>.mob-nav>.icon {
+    position: relative;
+    text-align: center;
+    display: none;
+}
+
+.m-nav {
+    position: absolute;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.navigation-bar>.nav>.nav-icon {
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    /* margin-right: 1rem; */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    transition: 200ms ease-in-out;
+}
+
+.nav-icon:hover {
+    letter-spacing: 4px;
+    transform: scaleX(1.2);
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.intro {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1400px;
+    height: 90vh;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+}
+
+.introduction {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text-box {
+    max-width: 500px;
+}
+
+.text-box>h1 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.text-box>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.introduction>.flip-container>.flip-main>.front>img {
+    background-color: #d86d16;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.manager {
+    position: absolute;
+}
+
+.manager>ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.manager>ul>li>a {
+    font-size: 2rem;
+    margin-right: 5rem;
+    text-decoration: none;
+    position: relative;
+    color: var(--clr);
+    transition: .5s ease;
+}
+
+.manager>ul>li>a:hover {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 20px var(--clr));
+}
+
+.contacts {
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+
+.contacts>h1 {
+    position: relative;
+    font-size: 4rem;
+    box-shadow: 0 0 25px rgba(200, 178, 178, 0.366);
+    width: 100%;
+    text-align: center;
+}
+
+.list-contacts>ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: large;
+    position: absolute;
+    top: 130%;
+}
+
+.list-contacts>h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.list-contacts>ul>li {
+    margin-right: 10rem;
+}
+
+.list-contacts>ul>li>a {
+    margin-right: 1rem;
+}
+
+.m-nav {
+    display: none;
+}
+
+.flip-container {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    /* background-color: green; */
+}
+
+.flip-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    /* background: green; */
+    transition: 1s ease-in-out;
+}
+
+.flip-main:hover {
+    transform: rotateY(180deg);
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    backface-visibility: hidden;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 900px) {
+    .navigation-bar {
+        padding: 1rem;
+    }
+
+    .navigation-bar>#si {
+        font-size: 1.8rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .navigation-bar>.mob-nav>.icon {
+        position: fixed;
+        display: inline-block;
+        transform: translate(-15px, 8px);
+        font-size: 1.5rem;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .introduction {
+        margin-top: 4rem;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .introduction>img {
+        margin-bottom: 4rem;
+    }
+
+    .manager {
+        display: none;
+    }
+
+    .m-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -45%;
+        width: 45%;
+        height: 100%;
+        background: rgba(210, 210, 210, 0.363);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: .25s ease-in-out;
+        z-index: 1;
+    }
+
+    body>.active {
+        right: 0;
+        opacity: 1;
+    }
+
+    .m-nav>a {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.9);
+        z-index: 1;
+    }
+
+    @media (max-width: 800px) {
+        .introduction {
+            margin-top: 4rem;
+        }
+
+        .introduction>img {
+            width: 35%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .introduction {
+            margin-top: 1rem;
+        }
+
+        .introduction>img {
+            margin-top: 4rem;
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .introduction>img {
+            width: 50%;
+        }
+
+        .introduction>.text-box>h1 {
+            font-size: 2.8rem;
+        }
+
+        .introduction>.text-box>p {
+            font-size: 1.3rem;
+        }
+    }
+}
